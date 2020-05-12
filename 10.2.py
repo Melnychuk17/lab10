@@ -4,13 +4,13 @@
  сума не буде дорівнювати однозначному числу, що і буде цифровим коренем заданого
  числа."""
 import timeit
-n=int(input('Enter yhe number: '))
-def sum(n):
+n=int(input('Enter the number: '))
+def sum(n):  # находим сумму елементов числа
     if n<10:
         return n
     else:
         return n%10+sum(n//10)
-def kor_rec(n):
+def kor_rec(n):  # корень сумы
     if n<10:
         return n
     else:
@@ -23,10 +23,11 @@ def kor_iter(n):
         b=n//10
         n=a+b
 print(kor_iter(n))
-
+# считаем время работы програмы
 t=timeit.timeit('"-".join(str(n)for n in range(100))', number=10000)
 print(f'Program worked {t} seconds')
 
+# Способ итерации занимает куда меньше рядков програмы, сдедовательно он быстрее и легче
 
 
 

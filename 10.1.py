@@ -18,7 +18,8 @@ def fact_iter(n):
         n-=1
     print(count)
 fact_iter(n)
-
+# считаем время работы програмы
 t=timeit.timeit('"-".join(str(n)for n in range(100))', number=10000)
 print(f'Program worked {t} seconds')
 
+# В этой задаче проще использовать рекурсию, так как она белее читабельная
